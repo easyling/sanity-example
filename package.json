@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "@sanity/blueprints": "0.12.2",
+    "@sanity/functions": "1.2.0"
+  },
+  "dependencies": {
+    "@easyling/sanity-auto-translate": "0.0.2-rc.0"
+  }
+}
