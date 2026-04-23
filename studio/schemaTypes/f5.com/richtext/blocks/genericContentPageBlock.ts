@@ -1,4 +1,5 @@
 import {defineArrayMember} from 'sanity'
+import {extendBlockMarksWithDNT} from '@easyling/sanity-connector'
 
 import {figure} from '../additionalTypes/figure'
 import {gitHubGist} from '../additionalTypes/githubGist'
@@ -18,10 +19,10 @@ export const genericContentPageBlock = defineArrayMember({
   styles: [...baseStyles],
   lists: [...baseLists],
   // Marks let you mark up inline text in the block editor.
-  marks: {
+  marks: extendBlockMarksWithDNT({
     // Decorators usually describe a single property – e.g. a typographic
     // preference or highlighting by editors.
     decorators: [...baseDecorations],
     annotations: [...baseAnnotations],
-  },
+  }),
 })

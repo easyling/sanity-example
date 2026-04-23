@@ -1,4 +1,5 @@
 import {defineArrayMember} from 'sanity'
+import {extendBlockMarksWithDNT} from '@easyling/sanity-connector'
 
 import BigNumberDecorator from '../../../components/BigNumberDecorator'
 import Footnote from '../../../components/Footnote'
@@ -28,7 +29,7 @@ export const block = defineArrayMember({
     {title: 'Numbered', value: 'number'},
   ],
   // Marks let you mark up inline text in the block editor.
-  marks: {
+  marks: extendBlockMarksWithDNT({
     // Decorators usually describe a single property – e.g. a typographic
     // preference or highlighting by editors.
     decorators: [
@@ -61,7 +62,7 @@ export const block = defineArrayMember({
     ],
     // Annotations can be any object structure – e.g. a link or a footnote.
     annotations: [externalLink, internalLink],
-  },
+  }),
 })
 
 export default block

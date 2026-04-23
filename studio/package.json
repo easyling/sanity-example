@@ -15,7 +15,7 @@
     "sanity"
   ],
   "dependencies": {
-    "@easyling/sanity-connector": "rc",
+    "@easyling/sanity-connector": "../../sanity-plugin/plugin/",
     "@sanity/code-input": "^6.0.0",
     "@sanity/vision": "^5.0.0",
     "sanity": "^5.0.0",

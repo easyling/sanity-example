@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+import {extendBlockMarksWithDNT} from '@easyling/sanity-connector'
 
 import {NamingConstants} from '../../constants/namingConstants'
 import {Dropdowns} from '../../dialogs/dropdowns'
@@ -43,9 +44,9 @@ export const heroData = defineType({
       of: [
         {
           type: 'block',
-          marks: {
+          marks: extendBlockMarksWithDNT({
             decorators: htmlEntities,
-          },
+          }),
         },
       ],
     }),

@@ -1,4 +1,5 @@
 import {defineArrayMember} from 'sanity'
+import {extendBlockMarksWithDNT} from '@easyling/sanity-connector'
 
 import {baseAnnotations} from '../annotations'
 import {baseDecorations} from '../custom-decorators'
@@ -15,10 +16,10 @@ export const accordionBlock = defineArrayMember({
   styles: [...baseStyles],
   lists: [...baseLists],
   // Marks let you mark up inline text in the block editor.
-  marks: {
+  marks: extendBlockMarksWithDNT({
     // Decorators usually describe a single property – e.g. a typographic
     // preference or highlighting by editors.
     decorators: [...baseDecorations],
     annotations: [...baseAnnotations],
-  },
+  }),
 })

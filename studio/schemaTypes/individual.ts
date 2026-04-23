@@ -1,5 +1,6 @@
 import {EarthGlobeIcon, EditIcon, MicrophoneIcon, UserIcon} from '@sanity/icons'
 import {defineField, defineType} from 'sanity'
+import {extendBlockMarksWithDNT} from '@easyling/sanity-connector'
 
 import {NamingConstants} from '../constants/namingConstants'
 import {CommonWidgets} from '../dialogs/commonWidgets'
@@ -171,9 +172,9 @@ export const individual = defineType({
         of: [
           {
             type: 'block',
-            marks: {
+            marks: extendBlockMarksWithDNT({
               decorators: htmlEntities,
-            },
+            }),
           },
         ],
         group: 'basic',
